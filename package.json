@@ -11,6 +11,7 @@
     "webpack": "^5.75.0"
   },
   "devDependencies": {
+    "@types/react": "^19.2.7",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
