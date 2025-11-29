@@ -23,8 +23,8 @@ export default function AgUserTable({ users }) {
   }, [users]);
 
   const columnDefs = useMemo(() => [
-    { headerName: "Name", field: "name", filter: "agTextColumnFilter", sortable: true, flex: 1 },
-    { headerName: "Email", field: "email", filter: "agTextColumnFilter", flex: 1.2 },
+    { headerName: "Name", field: "name", filter: "agTextColumnFilter", sortable: true, flex: 1.3, minWidth: 180 },
+    { headerName: "Email", field: "email", filter: "agTextColumnFilter", flex: 1.6, minWidth: 220 },
     { headerName: "Role", field: "role", filter: "agSetColumnFilter", width: 130 },
     { headerName: "Status", field: "status", filter: "agSetColumnFilter", width: 130 },
     { headerName: "Age", field: "age", filter: "agNumberColumnFilter", width: 100, sortable: true },
@@ -44,11 +44,12 @@ export default function AgUserTable({ users }) {
     pagination: true,
     paginationPageSize: 10,
     paginationPageSizeSelector: [10, 25, 50, 100],
+    domLayout: 'autoHeight',
   }), []);
 
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-sm">
-      <div className="ag-theme-quartz" style={{ height: 480, width: "100%" }}>
+      <div className="ag-theme-quartz" style={{ width: "100%" }}>
         {loading ? (
           <Skeleton />
         ) : (

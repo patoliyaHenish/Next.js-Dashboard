@@ -2,3 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 html, body { height: 100%; }
+
+@media (max-width: 640px) {
+	.ag-theme-quartz .ag-paging-panel {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		justify-content: space-between;
+		padding: 8px 0;
+	}
+	.ag-theme-quartz .ag-paging-panel > * {
+		margin: 0;
+	}
+	.ag-theme-quartz .ag-paging-page-size,
+	.ag-theme-quartz .ag-paging-row-summary-panel {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.ag-theme-quartz .ag-paging-description {
+		width: 100%;
+		text-align: center;
+		padding-top: 4px;
+	}
+	.ag-theme-quartz .ag-paging-button {
+		margin: 0 4px;
+	}
+}
